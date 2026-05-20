@@ -14,17 +14,18 @@ interface Props {
   approvedBy: string[]
   openComments: number
   currentUser: string
+  hrefOverride?: string
 }
 
 const REQUIRED = 2
 
-export default function PRCard({ pr, approvedBy, openComments, currentUser }: Props) {
+export default function PRCard({ pr, approvedBy, openComments, currentUser, hrefOverride }: Props) {
   const isReady = approvedBy.length >= REQUIRED
   const youApproved = approvedBy.includes(currentUser)
 
   return (
     <Link
-      href={`/admin/pr/${pr.number}`}
+      href={hrefOverride ?? `/admin/pr/${pr.number}`}
       className="block border border-zinc-800 rounded-xl p-5 hover:border-zinc-600 transition-colors bg-zinc-900/50 group"
     >
       <div className="flex items-start justify-between gap-4">
