@@ -1,14 +1,26 @@
 {
   "hero": {
-    "eyebrow": "Private Membership Association",
+    "eyebrow": "Private Membership Association · Est. May 8, 2026",
     "headline": "Ministry of Human Empowerment",
-    "body": "A faith-based organization dedicated to supporting life, community, and the full empowerment of every human being.",
+    "tagline": "A Spiritual Ministry Reliant Upon a Faith in Nature and Nature's God",
+    "body": "An unincorporated Private Ministerial Association dedicated to the upliftment, enlightenment, and empowerment of every human being on Earth.",
     "cta_primary_label": "Become a Member",
     "cta_primary_href": "/membership",
     "cta_secondary_label": "Our Mission",
     "cta_secondary_href": "/mission"
   },
-  "footer": {
-    "legal": "Ministry of Human Empowerment. All rights reserved."
+  "statement": {
+    "quote": "We recognize that all life arises from a unified field of consciousness, expressed through nature and the living world. We hold that each individual is a unique expression of this greater whole, inherently connected to all beings and to the unfolding intelligence of life itself.",
+    "attribution": "Statement of Faith, Ministry of Human Empowerment"
+  },
+  "ecosystem": {
+    "eyebrow": "Ministry Ecosystem",
+    "body": "MOHE is home to a growing network of projects — each advancing human empowerment, natural health, privacy, and conscious technology."
+  },
+  "join": {
+    "headline": "Join the Ministry",
+    "body": "Membership is an act of voluntary association — an affirmation of your sovereignty as a free and spiritually autonomous being, and your commitment to the advancement of human empowerment.",
+    "cta_label": "Apply for Membership",
+    "cta_href": "/membership"
   }
 }
