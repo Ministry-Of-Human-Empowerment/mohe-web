@@ -21,6 +21,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </Link>
           <span className="text-zinc-700">/</span>
           <span className="text-sm font-medium text-zinc-200">Admin</span>
+          <span className="text-zinc-700 ml-2">·</span>
+          <Link
+            href="/admin/editor"
+            className="text-sm text-zinc-500 hover:text-zinc-200 transition-colors ml-2"
+          >
+            Editor
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">

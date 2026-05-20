@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "eyebrow": "Private Membership Association",
+    "headline": "Ministry of Human Empowerment",
+    "body": "A faith-based organization dedicated to supporting life, community, and the full empowerment of every human being.",
+    "cta_primary_label": "Become a Member",
+    "cta_primary_href": "/membership",
+    "cta_secondary_label": "Our Mission",
+    "cta_secondary_href": "/mission"
+  },
+  "footer": {
+    "legal": "Ministry of Human Empowerment. All rights reserved."
+  }
+}

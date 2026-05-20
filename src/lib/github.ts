@@ -55,6 +55,66 @@ export async function submitReview(
   return data
 }
 
+export async function proposeEdit({
+  token,
+  filePath,
+  newContent,
+  branchName,
+  commitMessage,
+  prTitle,
+  prBody,
+}: {
+  token: string
+  filePath: string
+  newContent: string
+  branchName: string
+  commitMessage: string
+  prTitle: string
+  prBody: string
+}) {
+  const octokit = getOctokit(token)
+
+  const { data: devRef } = await octokit.git.getRef({ owner: ORG, repo: REPO, ref: "heads/dev" })
+  const devSha = devRef.object.sha
+
+  await octokit.git.createRef({
+    owner: ORG,
+    repo: REPO,
+    ref: `refs/heads/${branchName}`,
+    sha: devSha,
+  })
+
+  const { data: fileData } = await octokit.repos.getContent({
+    owner: ORG,
+    repo: REPO,
+    path: filePath,
+    ref: "dev",
+  })
+
+  const fileSha = (fileData as { sha: string }).sha
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: ORG,
+    repo: REPO,
+    path: filePath,
+    message: commitMessage,
+    content: Buffer.from(newContent).toString("base64"),
+    sha: fileSha,
+    branch: branchName,
+  })
+
+  const { data: pr } = await octokit.pulls.create({
+    owner: ORG,
+    repo: REPO,
+    title: prTitle,
+    head: branchName,
+    base: "dev",
+    body: prBody,
+  })
+
+  return pr
+}
+
 export async function getDeploymentPreviewUrl(
   _prNumber: number,
   headSha: string,
