@@ -1,208 +1,116 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import Nav from '@/components/layout/Nav'
+import Footer from '@/components/layout/Footer'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Membership — Ministry of Human Empowerment',
-  description:
-    'Join the Ministry of Human Empowerment — a Private Ministerial Association open to all who seek to advance human sovereignty, spiritual freedom, privacy, and empowerment.',
 }
 
-const memberRights = [
-  {
-    num: '01',
-    title: 'Sovereignty & Self-Determination',
-    body: 'You decide which members qualify to provide you counsel and advice concerning all matters — physical, spiritual, healthcare, law, and any other matter.',
-  },
-  {
-    num: '02',
-    title: 'Freedom of Choice',
-    body: 'Members have the freedom to choose and perform for themselves the types of therapies, treatments, and activities they believe best for their own health, wellness, and personal sovereignty.',
-  },
-  {
-    num: '03',
-    title: 'Private Domain Protection',
-    body: 'All activities within the Ministry are matters of private contract, protected by the First and Fourteenth Amendments and the Universal Declaration of Human Rights.',
-  },
-  {
-    num: '04',
-    title: 'Voluntary Association',
-    body: 'Membership is entirely voluntary. You may withdraw from this agreement and terminate membership at any time, by written notice to the Ministry.',
-  },
-  {
-    num: '05',
-    title: 'Common Law Jurisdiction',
-    body: 'Member activity within MOHE is under common law rather than statutory or regulatory law — free from the jurisdiction of government agencies and public entities.',
-  },
-  {
-    num: '06',
-    title: 'Community & Counsel',
-    body: 'Access to a network of members, knowledge systems, technologies, and projects dedicated to human empowerment, health, privacy, and spiritual growth.',
-  },
-]
-
-const memberAgreement = [
-  "MOHE's purpose is furthering the empowerment, upliftment, enlightenment, spiritual realization, and general welfare of people throughout the world.",
-  'The Ministry is a creation of free men and women to associate with each other in the private domain according to their ministry and talents.',
-  'MOHE is a platform for members to conduct all manner of private speech and business within the private domain.',
-  "Members affirm their right to freedom of religion, free speech, petition, assembly, and the right to freely exercise all unalienable rights as granted by our Creator.",
-  "Members voluntarily change their capacity from that of a public person to that of a private member.",
-  "I enter into this agreement freely, without duress or coercion, exercising my right of freedom of association.",
-]
-
-export default function MembershipPage() {
+export default function Membership() {
   return (
-    <div className="text-[#EDE8DC]">
+    <div className="flex flex-col min-h-screen bg-white">
+      <Nav />
+      <main className="flex-1">
 
-      {/* Hero */}
-      <section className="px-6 pt-20 pb-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_-5%,rgba(196,30,30,0.1),transparent)] pointer-events-none" />
-        <p className="text-[10px] font-semibold tracking-[0.35em] uppercase text-zinc-600 mb-5">
-          Voluntary Association
-        </p>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-50 max-w-3xl mx-auto leading-tight mb-6">
-          Become a Member
-        </h1>
-        <p className="text-sm text-zinc-500 max-w-xl mx-auto leading-relaxed">
-          Membership in the Ministry of Human Empowerment is an act of conscious, voluntary
-          association — an affirmation of your sovereignty and your commitment to the
-          advancement of human empowerment.
-        </p>
-      </section>
-
-      <div className="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-
-      {/* What Membership Means */}
-      <section className="px-6 py-20">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-zinc-600 mb-10">
-            What Membership Means
+        {/* Header */}
+        <section className="px-6 py-24 bg-stone-50 text-center">
+          <p className="text-xs font-semibold tracking-widest uppercase text-amber-700 mb-4">Membership</p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 max-w-3xl mx-auto">
+            Join the Ministry
+          </h1>
+          <p className="mt-5 text-lg text-stone-600 max-w-xl mx-auto leading-relaxed">
+            Membership is an invitation — not a transaction. We welcome sincere people of faith, conscience, and goodwill.
           </p>
-          <div className="space-y-5 text-sm text-zinc-400 leading-relaxed">
-            <p>
-              Membership in MOHE is open to any natural man or woman of sound mind who adheres
-              to the purposes of this Ministry and has not been previously sanctioned or banned by the Ministry.
-            </p>
-            <p>
-              By becoming a member, you voluntarily change your legal capacity from that of a public
-              person to that of a private member — entering the private domain of the Ministry, governed
-              by common law and ecclesiastical law, outside the jurisdiction of public government regulation.
-            </p>
-            <p>
-              This is not a decision made lightly — it is a declaration of your sovereignty, your faith,
-              and your commitment to the principles of human empowerment.
-            </p>
+        </section>
+
+        {/* What Membership Means */}
+        <section className="px-6 py-20 bg-white">
+          <div className="max-w-3xl mx-auto space-y-10">
+            <div>
+              <h2 className="text-2xl font-semibold text-stone-900 mb-4">What Membership Means</h2>
+              <p className="text-stone-600 leading-relaxed text-lg">
+                Becoming a member of the Ministry of Human Empowerment is a commitment to a community — not a subscription to a service. Members share in the life, mission, and values of the Ministry, and are welcomed into its network of projects, resources, and relationships.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-stone-900 mb-4">Who We Welcome</h2>
+              <p className="text-stone-600 leading-relaxed text-lg mb-6">
+                Membership is open to those who resonate with the Ministry&apos;s principles and sincerely wish to participate in its community and mission. We welcome people of all backgrounds who share a commitment to:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Living with faith, integrity, and conscience',
+                  'Respecting the dignity and sovereignty of every person',
+                  'Supporting healing, education, and human empowerment',
+                  'Contributing to community with generosity and goodwill',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-stone-600">
+                    <span className="text-amber-600 mt-1 shrink-0">→</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-stone-900 mb-4">Member Benefits</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'Access to Ministry resources and projects',
+                  'Connection to a values-aligned community',
+                  'Participation in Ministry initiatives',
+                  'Access to private member communications',
+                  'Support from and for fellow members',
+                  'A voice in the Ministry\'s direction',
+                ].map((benefit) => (
+                  <div key={benefit} className="flex items-start gap-3 border border-stone-200 rounded-xl px-5 py-4 text-sm text-stone-700">
+                    <span className="text-amber-600 shrink-0">✦</span>
+                    {benefit}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        {/* Application */}
+        <section className="px-6 py-20 bg-stone-50" id="apply">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-semibold text-stone-900 mb-3">Membership Application</h2>
+            <p className="text-stone-600 leading-relaxed text-lg mb-10">
+              The membership process begins with a simple application. This helps us understand who you are and how you hope to participate in the Ministry community. There is no fee to apply — membership is extended by invitation and mutual agreement.
+            </p>
 
-      {/* Member Rights */}
-      <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-zinc-600 text-center mb-14">
-            Member Rights &amp; Benefits
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {memberRights.map((r) => (
-              <div
-                key={r.num}
-                className="p-6 rounded-xl border border-white/8 bg-white/[0.02] hover:border-red-900/30 transition-all"
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                className="px-8 py-3 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
               >
-                <div className="text-xs text-red-700 font-mono mb-3">{r.num}</div>
-                <h3 className="text-sm font-semibold text-zinc-200 mb-2">{r.title}</h3>
-                <p className="text-xs text-zinc-500 leading-relaxed">{r.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-
-      {/* Membership Agreement Summary */}
-      <section className="px-6 py-20">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-zinc-600 mb-4">
-            Membership Agreement
-          </p>
-          <p className="text-sm text-zinc-500 leading-relaxed mb-10">
-            By joining the Ministry of Human Empowerment, members agree to the following core principles:
-          </p>
-          <div className="space-y-3">
-            {memberAgreement.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 p-5 rounded-xl border border-white/6 bg-white/[0.02]"
+                Apply Online
+              </button>
+              <button
+                className="px-8 py-3 rounded-full border border-stone-300 text-stone-700 text-sm font-medium hover:border-stone-600 hover:text-stone-900 transition-colors"
               >
-                <div className="w-1 h-1 rounded-full bg-red-700 mt-2 shrink-0" />
-                <p className="text-sm text-zinc-400 leading-relaxed">{item}</p>
-              </div>
-            ))}
+                Download Membership Application
+              </button>
+            </div>
+
+            <p className="text-sm text-stone-400 mt-6">
+              Online application and downloadable PDF will be available shortly. Contact us if you&apos;d like to begin the process now.
+            </p>
           </div>
-          <p className="mt-8 text-xs text-zinc-600 leading-relaxed">
-            The full Membership Application, containing all 21 articles of agreement, will be provided
-            upon request. Membership may be terminated by written notice at any time.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <div className="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
-
-      {/* Eligibility */}
-      <section className="px-6 py-20">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-zinc-600 mb-10">
-            Eligibility
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { label: 'Open to', value: 'Any natural man or woman of sound mind' },
-              { label: 'Founded on', value: 'May 8, 2026' },
-              { label: 'Jurisdiction', value: 'Common law / Ecclesiastical law' },
-              { label: 'Type', value: 'Unincorporated Private Ministerial Association' },
-              { label: 'Dues', value: 'At discretion of the Trustees' },
-              { label: 'Exit', value: 'Voluntary withdrawal at any time by written notice' },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-1 p-4 rounded-xl border border-white/6 bg-white/[0.02]">
-                <span className="text-[10px] text-zinc-700 uppercase tracking-widest">{item.label}</span>
-                <span className="text-sm text-zinc-300">{item.value}</span>
-              </div>
-            ))}
+        {/* Closing note */}
+        <section className="px-6 py-20 bg-white text-center">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-xl text-stone-700 leading-relaxed font-light">
+              Membership in this Ministry is not about dues or obligation. It is about belonging to something — and being part of something that belongs to you.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="px-6 pb-24">
-        <div className="max-w-2xl mx-auto text-center border border-red-900/30 rounded-3xl p-14 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(196,30,30,0.1),transparent)]">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-50 mb-4">
-            Ready to Join?
-          </h2>
-          <p className="text-sm text-zinc-400 leading-relaxed mb-8 max-w-md mx-auto">
-            Membership applications are currently handled directly by the Ministry.
-            Reach out to begin your voluntary association with the Ministry of Human Empowerment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@mohe.org"
-              className="px-10 py-3 rounded-full bg-red-700 hover:bg-red-600 text-white text-sm font-medium transition-colors"
-            >
-              Apply for Membership
-            </a>
-            <Link
-              href="/mission"
-              className="px-10 py-3 rounded-full border border-white/15 text-zinc-300 text-sm font-medium hover:border-white/30 hover:text-zinc-100 transition-colors"
-            >
-              Read Our Mission
-            </Link>
-          </div>
-          <p className="mt-6 text-xs text-zinc-700">
-            By applying, you affirm your voluntary association and agreement with the Ministry principles.
-          </p>
-        </div>
-      </section>
-
+      </main>
+      <Footer />
     </div>
   )
 }
