@@ -1,5 +1,6 @@
 import { auth } from "@/auth"
 import { getPR, getPRReviews, getDeploymentPreviewUrl } from "@/lib/github"
+import { getVercelPreviewForBranch, getBranchPreviewUrl } from "@/lib/vercel"
 import { supabase } from "@/lib/supabase"
 import PreviewViewer from "@/components/admin/PreviewViewer"
 import ApprovalBar from "@/components/admin/ApprovalBar"
@@ -25,7 +26,10 @@ export default async function PRPage({
 
   if (!pr) notFound()
 
-  const previewUrl = await getDeploymentPreviewUrl(prNumber, pr.head.sha, token)
+  const previewUrl =
+    (await getDeploymentPreviewUrl(prNumber, pr.head.sha, token)) ??
+    (await getVercelPreviewForBranch(pr.head.ref)) ??
+    getBranchPreviewUrl(pr.head.ref)
 
   const latestByUser: Record<string, string> = {}
   for (const r of reviews) {
