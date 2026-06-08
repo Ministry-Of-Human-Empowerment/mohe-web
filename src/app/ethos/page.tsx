@@ -9,7 +9,7 @@ export const metadata = {
 const principles = [
   {
     title: 'Faith',
-    body: 'We believe in a living spiritual reality that transcends and underlies all things. The Ministry is rooted in sincere faith and genuine conscience — not dogma, but devotion.',
+    body: 'Faith is not about dogma. Faith is an expectation for goodness in humanity as opposed to fear of the evil in the world. We believe in a living spiritual reality that transcends and underlies all things. The Ministry is rooted in sincere faith and genuine conscience.',
   },
   {
     title: 'Privacy',
@@ -21,7 +21,7 @@ const principles = [
   },
   {
     title: 'Healing',
-    body: 'Healing is possible. Physical, emotional, and spiritual restoration are not luxuries — they are the birthright of every human being. MOHE is committed to making paths to healing more accessible.',
+    body: 'Physical, emotional, and spiritual health are the birthright of every human being. The Ministry of Human Empowerment is committed to making paths to healing more possible and accessible.',
   },
   {
     title: 'Education',
@@ -33,60 +33,123 @@ const principles = [
   },
   {
     title: 'Service',
-    body: 'Service is not obligation — it is love in action. MOHE is built on the conviction that giving generously to others is the highest expression of community.',
+    body: 'Service is a desirable path. The Ministry of Human Empowerment is built on the conviction that giving generously to others, without depleting ourselves, is a powerful path towards the expansion of consciousness and value for humanity.',
   },
+]
+
+const affirmations = [
+  'Life, awareness, and creation are sacred',
+  'The expansion of consciousness is a natural and desirable path',
+  'Beauty emerges from alignment with the flow of life',
+  'Truth is revealed through direct experience, reflection, and communion with nature',
+  'Every individual possesses an inherent right to sovereignty over their own mind, body, consciousness, and personal information',
+]
+
+const commitments = [
+  'The cultivation of awareness',
+  'The protection and enhancement of life',
+  'The preservation of privacy, sovereignty, and human dignity',
+  'The free exchange of knowledge and insight through voluntary and conscious association',
+  'The empowerment of individuals to realize their fullest expression',
 ]
 
 export default function Ethos() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-stone-900">
       <Nav />
       <main className="flex-1">
 
         {/* Header */}
-        <section className="px-6 py-24 bg-stone-50 text-center">
-          <p className="text-xs font-semibold tracking-widest uppercase text-amber-700 mb-4">Ethos</p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 max-w-3xl mx-auto">
+        <section className="px-6 py-24 bg-stone-900 text-center">
+          <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-4">Ethos</p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white max-w-3xl mx-auto">
             Statement of Faith & Core Principles
           </h1>
-          <p className="mt-5 text-lg text-stone-600 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-stone-300 max-w-xl mx-auto leading-relaxed">
             The convictions that guide everything we do.
           </p>
         </section>
 
         {/* Statement of Faith */}
-        <section className="px-6 py-20 bg-white">
+        <section className="px-6 py-20 bg-stone-950">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-semibold text-stone-900 mb-6">Statement of Faith</h2>
-            <div className="text-stone-600 leading-relaxed text-lg space-y-5 border-l-2 border-amber-300 pl-6">
+            <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-3">Statement of Faith</p>
+            <h2 className="text-2xl font-semibold text-white mb-10">Ministry of Human Empowerment</h2>
+
+            <div className="text-stone-300 leading-relaxed text-lg space-y-6 border-l-2 border-amber-500 pl-8">
               <p>
-                We believe in the inherent dignity and worth of every human being, created in the image of a living, loving spiritual reality.
+                We recognize that all life arises from a unified field of consciousness, expressed through nature and the living world.
               </p>
               <p>
-                We believe that faith is not confined to a building, a denomination, or a doctrine — but lives in the sincere heart of every person who seeks truth, goodness, and service.
+                We hold that each individual is a unique expression of this greater whole, inherently connected to all beings and to the unfolding intelligence of life itself.
               </p>
               <p>
-                We believe that healing — physical, emotional, spiritual — is not only possible but is a sacred calling for those equipped to offer it.
+                We place our faith in the harmony of nature and in the guiding intelligence often referred to as &ldquo;Nature&rsquo;s God,&rdquo; not as a distant authority, but as the living source present within all things.
+              </p>
+
+              <div>
+                <p className="mb-4">We affirm that:</p>
+                <ul className="space-y-3 ml-2">
+                  {affirmations.map((a) => (
+                    <li key={a} className="flex items-start gap-3">
+                      <span className="text-amber-400 mt-1 shrink-0">✦</span>
+                      <span>{a}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p>
+                We recognize that life flourishes when nurtured within environments aligned with truth, freedom, privacy, creativity, nourishment, connection, mutual respect, ease, and flow. Just as the quality of soil shapes the health, vitality, and fruitfulness of a plant, the conditions surrounding human beings shape the expression of consciousness, health, creativity, and human potential.
               </p>
               <p>
-                We believe in the freedom of every person to pursue their own relationship with the Divine, to govern their own body and mind, and to live according to the light of their own conscience.
+                We therefore seek to cultivate environments in which life may thrive physically, mentally, emotionally, spiritually, socially, and creatively, and to do so in ways that reduce unnecessary friction, coercion, fear, manipulation, and artificial barriers to human flourishing. We recognize ease not as passivity, but as alignment with the natural flow through which life most fully expresses its vitality, intelligence, beauty, and creative potential.
               </p>
               <p>
-                We believe that community built on these principles is among the most powerful forces for good in the world.
+                We recognize privacy as a natural and essential condition for the flourishing of life and authentic self-expression. A person&rsquo;s thoughts, consciousness, experiences, communications, and personal information are extensions of the individual and remain their rightful property and responsibility.
+              </p>
+              <p>
+                In an age where human attention, behavior, and personal information have become commodified, many systems offer convenience in exchange for ownership, access, surveillance, or exploitation of personal data through agreements rarely understood or consciously accepted. We reject systems and practices that exploit, commodify, manipulate, or extract human information, awareness, attention, or identity without informed and voluntary consent.
+              </p>
+              <p>
+                We believe privacy and convenience should coexist harmoniously. We support the creation of systems, technologies, and communities that make privacy, sovereignty, and human dignity accessible, practical, and easy to maintain, so that life may flourish more naturally and freely.
+              </p>
+              <p>
+                We recognize that which supports life, growth, clarity, vitality, and connection as aligned with our path.
+              </p>
+              <p>
+                We recognize that which diminishes life, suppresses awareness, disrupts harmony, or turns against the living flow of existence as misaligned with our principles. In this sense, &ldquo;evil&rdquo; may be understood symbolically as LIVE inverted: a movement away from vitality, awareness, connection, and conscious creation.
+              </p>
+
+              <div>
+                <p className="mb-4">We commit to:</p>
+                <ul className="space-y-3 ml-2">
+                  {commitments.map((c) => (
+                    <li key={c} className="flex items-start gap-3">
+                      <span className="text-amber-400 mt-1 shrink-0">✦</span>
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p>
+                We honor the freedom of each member to explore, interpret, and embody truth in their own way, in alignment with conscience, nature, and the greater good of life.
               </p>
             </div>
           </div>
         </section>
 
         {/* Core Principles */}
-        <section className="px-6 py-20 bg-stone-50">
+        <section className="px-6 py-20 bg-stone-900">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-semibold text-stone-900 mb-10 text-center">Core Principles</h2>
-            <div className="space-y-6">
+            <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-3 text-center">Core Principles</p>
+            <h2 className="text-2xl font-semibold text-white mb-10 text-center">What We Stand For</h2>
+            <div className="space-y-5">
               {principles.map(({ title, body }) => (
-                <div key={title} className="bg-white border border-stone-200 rounded-2xl p-6">
-                  <h3 className="text-lg font-semibold text-stone-900 mb-2">{title}</h3>
-                  <p className="text-stone-600 leading-relaxed">{body}</p>
+                <div key={title} className="bg-stone-800 border border-stone-700 rounded-2xl p-6">
+                  <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+                  <p className="text-stone-400 leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>
@@ -94,14 +157,14 @@ export default function Ethos() {
         </section>
 
         {/* CTA */}
-        <section className="px-6 py-20 bg-white text-center">
+        <section className="px-6 py-20 bg-stone-950 text-center">
           <div className="max-w-xl mx-auto">
-            <p className="text-stone-600 mb-8 leading-relaxed text-lg">
+            <p className="text-stone-300 mb-8 leading-relaxed text-lg">
               These principles are the foundation of our membership community. If they resonate with you, we welcome you.
             </p>
             <Link
-              href="/membership"
-              className="px-8 py-3 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
+              href="/membership#apply"
+              className="px-8 py-3 rounded-full bg-amber-500 text-stone-900 text-sm font-medium hover:bg-amber-400 transition-colors"
             >
               Explore Membership
             </Link>
