@@ -14,7 +14,15 @@ interface Change {
   current: string
 }
 
+// Editable pages — each renders with ?edit=1 and saves to content/pages/<slug>.json
+const PAGES = [
+  { slug: "home", label: "Homepage", path: "/" },
+  { slug: "about", label: "About", path: "/about" },
+  { slug: "mission", label: "Mission", path: "/mission" },
+] as const
+
 const FIELD_LABELS: Record<string, string> = {
+  // Home
   "hero.eyebrow": "Hero eyebrow",
   "hero.headline": "Hero headline",
   "hero.tagline": "Hero tagline",
@@ -28,6 +36,23 @@ const FIELD_LABELS: Record<string, string> = {
   "join.headline": "Join section headline",
   "join.body": "Join section description",
   "join.cta_label": "Join button label",
+  // About
+  "what_is_mohe.eyebrow": "“What is MOHE” title",
+  "pma.eyebrow": "PMA section title",
+  "founder.eyebrow": "Founder section title",
+  "founder.name": "Founder name",
+  "founder.title": "Founder title",
+  "cta.body": "CTA description",
+  "cta.cta_label": "CTA button label",
+  // Mission
+  "statement.eyebrow": "Statement section title",
+  "statement.affirm_heading": "“We Affirm” heading",
+  "privacy.heading": "Privacy block heading",
+  "commitments.eyebrow": "Commitments section title",
+  "purpose.eyebrow": "Purpose section title",
+  "purpose.intro": "Purpose intro",
+  "honor.quote": "Honor quote",
+  "honor.attribution": "Honor attribution",
 }
 
 export default function VisualEditor() {
@@ -41,6 +66,17 @@ export default function VisualEditor() {
   const [result, setResult] = useState<{ number: number; url: string } | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [iframeReady, setIframeReady] = useState(false)
+  const [activePage, setActivePage] = useState<(typeof PAGES)[number]>(PAGES[0])
+
+  const switchPage = (page: (typeof PAGES)[number]) => {
+    if (page.slug === activePage.slug) return
+    if (Object.keys(changes).length > 0 && !window.confirm("Discard unsaved changes and switch pages?")) return
+    setActivePage(page)
+    setChanges({})
+    setActiveField(null)
+    setResult(null)
+    setIframeReady(false)
+  }
 
   useEffect(() => {
     const handler = (e: MessageEvent) => {
@@ -99,7 +135,7 @@ export default function VisualEditor() {
       const res = await fetch("/api/editor/propose", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ page: "home", fields, prTitle: prTitle.trim() }),
+        body: JSON.stringify({ page: activePage.slug, fields, prTitle: prTitle.trim() }),
       })
       const data = await res.json()
       if (res.ok) {
@@ -124,7 +160,21 @@ export default function VisualEditor() {
         <div className="flex items-center gap-3">
           <span className="text-xs font-semibold text-zinc-300">Visual Editor</span>
           <span className="text-zinc-700">·</span>
-          <span className="text-xs text-zinc-600">Homepage</span>
+          <div className="flex items-center gap-1 bg-zinc-900 border border-zinc-800 rounded-lg p-0.5">
+            {PAGES.map((p) => (
+              <button
+                key={p.slug}
+                onClick={() => switchPage(p)}
+                className={`text-xs px-2.5 py-1 rounded-md transition-colors ${
+                  p.slug === activePage.slug
+                    ? "bg-zinc-100 text-zinc-900 font-semibold"
+                    : "text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
           {changeCount > 0 && (
             <span className="text-xs bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full">
               {changeCount} change{changeCount !== 1 ? "s" : ""}
@@ -155,8 +205,9 @@ export default function VisualEditor() {
           </div>
         )}
         <iframe
+          key={activePage.slug}
           ref={iframeRef}
-          src="/?edit=1"
+          src={`${activePage.path}?edit=1`}
           className="w-full h-full border-0"
           title="Visual editor"
           onLoad={() => setIframeReady(true)}

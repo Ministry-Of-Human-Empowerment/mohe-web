@@ -55,43 +55,62 @@ export async function submitReview(
   return data
 }
 
+// Deep-merge edited fields ({ section: { key: value } }) into an existing
+// content object. Only the touched keys are overwritten — sibling keys and
+// arrays (paragraphs, items, projects…) under each section are preserved.
+function mergeFields(
+  existing: Record<string, unknown>,
+  fields: Record<string, Record<string, string>>
+): Record<string, unknown> {
+  const merged: Record<string, unknown> = { ...existing }
+  for (const [section, keys] of Object.entries(fields)) {
+    merged[section] = { ...(existing[section] as object ?? {}), ...keys }
+  }
+  return merged
+}
+
 export async function proposeEdit({
   token,
   filePath,
-  newContent,
+  fields,
   branchName,
   commitMessage,
   prTitle,
   prBody,
+  baseBranch = "dev",
 }: {
   token: string
   filePath: string
-  newContent: string
+  fields: Record<string, Record<string, string>>
   branchName: string
   commitMessage: string
   prTitle: string
   prBody: string
+  baseBranch?: string
 }) {
   const octokit = getOctokit(token)
 
-  const { data: devRef } = await octokit.git.getRef({ owner: ORG, repo: REPO, ref: "heads/dev" })
-  const devSha = devRef.object.sha
+  const { data: baseRef } = await octokit.git.getRef({ owner: ORG, repo: REPO, ref: `heads/${baseBranch}` })
+  const baseSha = baseRef.object.sha
 
   await octokit.git.createRef({
     owner: ORG,
     repo: REPO,
     ref: `refs/heads/${branchName}`,
-    sha: devSha,
+    sha: baseSha,
   })
 
   const { data: fileData } = await octokit.repos.getContent({
     owner: ORG,
     repo: REPO,
     path: filePath,
-    ref: "dev",
+    ref: baseBranch,
   })
 
   const fileSha = (fileData as { sha: string }).sha
+  const existingRaw = Buffer.from((fileData as { content: string }).content, "base64").toString("utf-8")
+  const merged = mergeFields(JSON.parse(existingRaw), fields)
+  const newContent = JSON.stringify(merged, null, 2) + "\n"
 
   await octokit.repos.createOrUpdateFileContents({
     owner: ORG,
@@ -108,7 +127,7 @@ export async function proposeEdit({
     repo: REPO,
     title: prTitle,
     head: branchName,
-    base: "dev",
+    base: baseBranch,
     body: prBody,
   })
 
