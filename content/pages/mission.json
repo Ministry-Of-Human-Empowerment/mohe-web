@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "eyebrow": "Ministry of Human Empowerment",
+    "headline": "Mission & Statement of Faith",
+    "body": "Our faith is our foundation. Below is the living expression of what we believe, what we commit to, and why this Ministry exists."
+  },
+  "statement": {
+    "eyebrow": "Statement of Faith",
+    "intro_paragraphs": [
+      "We recognize that all life arises from a unified field of consciousness, expressed through nature and the living world.",
+      "We hold that each individual is a unique expression of this greater whole, inherently connected to all beings and to the unfolding intelligence of life itself.",
+      "We place our faith in the harmony of nature and in the guiding intelligence often referred to as \"Nature's God\" — not as a distant authority, but as the living source present within all things."
+    ],
+    "affirm_heading": "We Affirm",
+    "affirmations": [
+      "Life, awareness, and creation are sacred",
+      "The expansion of consciousness is a natural and desirable path",
+      "Beauty emerges from alignment with the flow of life",
+      "Truth is revealed through direct experience, reflection, and communion with nature",
+      "Every individual possesses an inherent right to sovereignty over their own mind, body, consciousness, and personal information"
+    ],
+    "body_paragraphs": [
+      "We recognize that life flourishes when nurtured within environments aligned with truth, freedom, privacy, creativity, nourishment, connection, mutual respect, ease, and flow. Just as the quality of soil shapes the health, vitality, and fruitfulness of a plant, the conditions surrounding human beings shape the expression of consciousness, health, creativity, and human potential.",
+      "We therefore seek to cultivate environments in which life may thrive — physically, mentally, emotionally, spiritually, socially, and creatively — and to do so in ways that reduce unnecessary friction, coercion, fear, manipulation, and artificial barriers to human flourishing.",
+      "We recognize ease not as passivity, but as alignment with the natural flow through which life most fully expresses its vitality, intelligence, beauty, and creative potential."
+    ],
+    "closing": "We recognize that which supports life, growth, clarity, vitality, and connection as aligned with our path. We recognize that which diminishes life, suppresses awareness, disrupts harmony, or turns against the living flow of existence as misaligned with our principles."
+  },
+  "privacy": {
+    "heading": "Privacy as Sacred",
+    "paragraphs": [
+      "We recognize privacy as a natural and essential condition for the flourishing of life and authentic self-expression. A person's thoughts, consciousness, experiences, communications, and personal information are extensions of the individual and remain their rightful property and responsibility.",
+      "In an age where human attention, behavior, and personal information have become commodified, many systems offer convenience in exchange for ownership, access, surveillance, or exploitation of personal data through agreements rarely understood or consciously accepted. We reject systems and practices that exploit, commodify, manipulate, or extract human information, awareness, attention, or identity without informed and voluntary consent.",
+      "We believe privacy and convenience should coexist harmoniously. We support the creation of systems, technologies, and communities that make privacy, sovereignty, and human dignity accessible, practical, and easy to maintain — so that life may flourish more naturally and freely."
+    ]
+  },
+  "commitments": {
+    "eyebrow": "We Commit To",
+    "items": [
+      "The cultivation of awareness",
+      "The protection and enhancement of life",
+      "The preservation of privacy, sovereignty, and human dignity",
+      "The free exchange of knowledge and insight through voluntary and conscious association",
+      "The empowerment of individuals to realize their fullest expression"
+    ]
+  },
+  "purpose": {
+    "eyebrow": "Ministry Purpose",
+    "intro": "The purpose and mission of The Ministry of Human Empowerment, as declared in our founding Charter & Bylaws:",
+    "items": [
+      "To promote faith-based doctrines grounded in spiritual inquiry, nature, and higher truth",
+      "To establish and oversee places of gathering, reflection, study, education, contemplation, and spiritual exploration",
+      "To evangelize worldwide",
+      "To support ministries, missionary activities, and ordain ministers",
+      "The preservation of truth",
+      "To protect and defend the gifts given to us by our Creator",
+      "To train, develop, and support leaders in our community and nation",
+      "To engage in activities necessary for the accomplishment of this purpose"
+    ]
+  },
+  "honor": {
+    "quote": "We honor the freedom of each member to explore, interpret, and embody truth in their own way, in alignment with conscience, nature, and the greater good of life.",
+    "attribution": "Statement of Faith, Ministry of Human Empowerment"
+  }
+}

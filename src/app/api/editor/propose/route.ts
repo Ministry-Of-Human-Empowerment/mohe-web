@@ -19,13 +19,11 @@ export async function POST(req: Request) {
   const branchName = `edit/${page}-${slug}-${Date.now()}`
   const commitMessage = `content(${page}): ${prTitle}`
 
-  const newContent = JSON.stringify(fields, null, 2) + "\n"
-
   try {
     const pr = await proposeEdit({
       token: session.user.accessToken,
       filePath,
-      newContent,
+      fields,
       branchName,
       commitMessage,
       prTitle: `content(${page}): ${prTitle}`,
