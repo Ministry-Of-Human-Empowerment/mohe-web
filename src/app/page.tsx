@@ -7,6 +7,7 @@ const projects = [
     name: 'FlowBond',
     tag: 'Ecosystem',
     description: 'A relational ecosystem for community, connection, and covenant. Parent platform for FlowCastle, FlowGarden, and FlowNation.',
+    url: 'https://flowbond.life',
   },
   {
     name: 'FlowCastle',
@@ -17,11 +18,13 @@ const projects = [
     name: 'FlowGarden',
     tag: 'FlowBond',
     description: 'A shared space for growing ideas, collaborations, and community projects within the FlowBond ecosystem.',
+    url: 'https://flowgarden.life',
   },
   {
     name: 'FlowNation',
     tag: 'FlowBond',
     description: 'A network layer connecting communities and values-aligned movements within the FlowBond ecosystem.',
+    url: 'https://flownation.world',
   },
   {
     name: 'CaptainsLog',
@@ -122,16 +125,35 @@ export default function Home() {
             <p className="text-xs font-semibold tracking-widest uppercase text-amber-700 mb-3 text-center">Ecosystem</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 text-center mb-14">Ministry Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {projects.map((project) => (
-                <div
-                  key={project.name}
-                  className="border border-stone-200 rounded-2xl p-6 hover:border-stone-400 hover:shadow-sm transition-all bg-white"
-                >
-                  <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">{project.tag}</span>
-                  <h3 className="text-base font-semibold text-stone-900 mt-2 mb-2">{project.name}</h3>
-                  <p className="text-sm text-stone-600 leading-relaxed">{project.description}</p>
-                </div>
-              ))}
+              {projects.map((project) => {
+                const cardClass =
+                  'block border border-stone-200 rounded-2xl p-6 hover:border-stone-400 hover:shadow-sm transition-all bg-white'
+                const inner = (
+                  <>
+                    <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">{project.tag}</span>
+                    <h3 className="text-base font-semibold text-stone-900 mt-2 mb-2 flex items-center gap-1.5">
+                      {project.name}
+                      {project.url && <span className="text-amber-600 text-sm" aria-hidden>↗</span>}
+                    </h3>
+                    <p className="text-sm text-stone-600 leading-relaxed">{project.description}</p>
+                  </>
+                )
+                return project.url ? (
+                  <a
+                    key={project.name}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cardClass}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={project.name} className={cardClass}>
+                    {inner}
+                  </div>
+                )
+              })}
             </div>
             <div className="text-center mt-10">
               <Link href="/projects" className="text-sm text-stone-500 underline underline-offset-4 hover:text-stone-900 transition-colors">

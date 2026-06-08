@@ -28,7 +28,17 @@ export default function Projects() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">Parent Ecosystem</span>
-              <h2 className="text-3xl font-semibold text-stone-900 mt-2 mb-4">FlowBond</h2>
+              <h2 className="text-3xl font-semibold text-stone-900 mt-2 mb-4">
+                <a
+                  href="https://flowbond.life"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-amber-700 transition-colors"
+                >
+                  FlowBond
+                  <span className="text-amber-600 text-xl" aria-hidden>↗</span>
+                </a>
+              </h2>
               <p className="text-lg text-stone-600 leading-relaxed max-w-2xl">
                 FlowBond is the relational ecosystem at the heart of the Ministry — a platform for community, connection, and covenant. It is the parent layer for three interconnected environments, each serving a distinct purpose within the same network.
               </p>
@@ -42,20 +52,38 @@ export default function Projects() {
                   Sovereign digital spaces for individuals and families. Private, personal, and fully protected — your digital home within the FlowBond network.
                 </p>
               </div>
-              <div className="border border-stone-200 rounded-2xl p-6 bg-stone-50" id="flowgarden">
+              <a
+                href="https://flowgarden.life"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border border-stone-200 rounded-2xl p-6 bg-stone-50 hover:border-amber-400 hover:shadow-sm transition-all"
+                id="flowgarden"
+              >
                 <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">FlowBond</span>
-                <h3 className="text-lg font-semibold text-stone-900 mt-2 mb-2">FlowGarden</h3>
+                <h3 className="text-lg font-semibold text-stone-900 mt-2 mb-2 flex items-center gap-1.5">
+                  FlowGarden
+                  <span className="text-amber-600 text-sm" aria-hidden>↗</span>
+                </h3>
                 <p className="text-sm text-stone-600 leading-relaxed">
                   A shared space for growing ideas, collaborations, and community projects. Where individuals come together to cultivate something larger than themselves.
                 </p>
-              </div>
-              <div className="border border-stone-200 rounded-2xl p-6 bg-stone-50" id="flownation">
+              </a>
+              <a
+                href="https://flownation.world"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border border-stone-200 rounded-2xl p-6 bg-stone-50 hover:border-amber-400 hover:shadow-sm transition-all"
+                id="flownation"
+              >
                 <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider">FlowBond</span>
-                <h3 className="text-lg font-semibold text-stone-900 mt-2 mb-2">FlowNation</h3>
+                <h3 className="text-lg font-semibold text-stone-900 mt-2 mb-2 flex items-center gap-1.5">
+                  FlowNation
+                  <span className="text-amber-600 text-sm" aria-hidden>↗</span>
+                </h3>
                 <p className="text-sm text-stone-600 leading-relaxed">
                   A network layer connecting communities and values-aligned movements. The commons where the FlowBond ecosystem meets the wider world.
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </section>
