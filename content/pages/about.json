@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "About MOHE",
+    "headline": "Who We Are",
+    "body": "The Ministry of Human Empowerment is an unincorporated Private Ministerial Association, operating under the authority of the Creator and the laws of Nature and Nature's God."
+  },
+  "what_is_mohe": {
+    "para1": "The Ministry of Human Empowerment (MOHE) is a faith-based, unincorporated Private Ministerial Association established on May 8, 2026 by Founding Trustee Cavin Balaster.",
+    "para2": "MOHE is organized for worship, education, spiritual freedom, and beneficent purposes, operating under the exclusive jurisdiction of ecclesiastical law as a Private Membership Association — outside the jurisdiction of government entities, agencies, and regulatory bodies, as protected by the First and Fourteenth Amendments to the United States Constitution, the Universal Declaration of Human Rights, and the laws of Nature's God.",
+    "para3": "The Ministry recognizes privacy, sovereignty of consciousness, and stewardship of personal information as natural extensions of the unalienable rights of free and spiritually autonomous beings.",
+    "para4": "The Ministry supports the creation of systems, technologies, environments, and communities that allow life to flourish through voluntary association, informed consent, ease, dignity, and respect for personal sovereignty."
+  },
+  "pma": {
+    "para1": "A Private Membership Association (PMA) is a private organization in which members voluntarily associate within the private domain, outside the jurisdiction of public law and government regulation.",
+    "para2": "Members of a PMA change their legal capacity from public to private, enabling them to conduct affairs, share information, receive counsel, and engage in activities under common law — protected by rights of assembly, association, and religious freedom.",
+    "para3": "The Ministry of Human Empowerment is established under Title 26 USC sections 508(c)(1)(A) and 6033(a)(3)(A), as a faith-based private organization not subject to incorporation with the state.",
+    "para4": "Membership is voluntary — an act of free will and conscious choice to associate with a community committed to the advancement of human sovereignty, health, spiritual freedom, and empowerment."
+  },
+  "founder": {
+    "name": "Cavin Balaster",
+    "title": "Senior Chairman & Founding Trustee",
+    "established": "Est. May 8, 2026",
+    "bio1": "Cavin Balaster is the Founding Trustee and Senior Chairman of The Ministry of Human Empowerment. As the designated Director, Cavin retains all rights to unlimited contract on behalf of the Ministry and full authority to designate or delegate powers and duties.",
+    "bio2": "Known for his work in brain health, human potential, and conscious living — Cavin established MOHE to create a legal and spiritual framework that protects and advances the sovereign rights of every human being, while building the technological and community infrastructure to support that mission."
+  },
+  "ecosystem": {
+    "eyebrow": "Ministry Ecosystem",
+    "body": "MOHE is the organizational home and spiritual foundation for a growing network of projects, platforms, and initiatives."
+  },
+  "cta": {
+    "body": "Ready to join? Membership in MOHE is open to any natural man or woman who adheres to the purposes of this Ministry.",
+    "label": "Become a Member",
+    "href": "/membership"
+  }
+}
