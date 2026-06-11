@@ -48,6 +48,16 @@ export default function About() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-semibold text-white mb-4">Our Role</h2>
+              <p className="text-stone-400 leading-relaxed text-lg">
+                The Ministry of Human Empowerment serves as the spiritual, philosophical, educational, and private-domain umbrella supporting projects, communities, technologies, publications, and initiatives that advance human flourishing.
+              </p>
+              <p className="text-stone-400 leading-relaxed text-lg mt-4">
+                Some projects focus on health and medical empowerment. Others focus on privacy, sovereignty, education, creativity, community building, and conscious technology. Together they express a shared commitment to helping life flourish.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Our Values</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[

@@ -23,6 +23,18 @@ export default function Projects() {
           </p>
         </section>
 
+        {/* Intro */}
+        <section className="px-6 py-12 bg-stone-950">
+          <div className="max-w-3xl mx-auto space-y-4 text-stone-300 text-lg leading-relaxed text-center">
+            <p>
+              Each project of The Ministry of Human Empowerment represents a different expression of the same mission: creating environments where life can flourish.
+            </p>
+            <p className="text-stone-400">
+              Some projects focus on empowering individuals through health education and healing. Others focus on privacy-preserving technology, personal sovereignty, community, creativity, knowledge sharing, and conscious living.
+            </p>
+          </div>
+        </section>
+
         {/* FlowBond Ecosystem */}
         <section className="px-6 py-20 bg-stone-950" id="flowbond">
           <div className="max-w-4xl mx-auto">
@@ -30,7 +42,7 @@ export default function Projects() {
               <span className="text-xs font-semibold text-amber-400 uppercase tracking-wider">Parent Ecosystem</span>
               <h2 className="text-3xl font-semibold text-white mt-2 mb-4">FlowBond</h2>
               <p className="text-lg text-stone-400 leading-relaxed max-w-2xl">
-                FlowBond is the relational ecosystem at the heart of the Ministry — a platform for community, connection, and covenant. It is the parent layer for three interconnected environments, each serving a distinct purpose within the same network.
+                FlowBond is the relational ecosystem at the heart of the Ministry — built to help people create trusted communities and aligned relationships. It is the parent layer for three interconnected environments, each grounded in belonging, mutual support, human connection, and shared purpose.
               </p>
             </div>
 
@@ -40,13 +52,13 @@ export default function Projects() {
                   id: 'flowcastle',
                   tag: 'Networked Community',
                   name: 'FlowCastle',
-                  desc: 'A connected space for people to gather, belong, and build relationships — your digital home within the FlowBond network.',
+                  desc: 'A space for knowledge organization, information architecture, and structured learning — your digital home for personal and collective intelligence within the FlowBond network.',
                 },
                 {
                   id: 'flowgarden',
                   tag: 'Networked Projects',
                   name: 'FlowGarden',
-                  desc: 'A shared space for collaborating on ideas, initiatives, and meaningful work within the FlowBond ecosystem.',
+                  desc: 'A garden for growth, creativity, and cultivation. A space for nurturing ideas, projects, and people — tended with care, intention, and a commitment to human development.',
                 },
                 {
                   id: 'flownation',
@@ -77,13 +89,16 @@ export default function Projects() {
               </h2>
               <p className="text-base italic text-amber-400 mb-6">Because Privacy Is Very Important.</p>
               <p className="text-lg text-stone-300 leading-relaxed mb-5">
-                A sovereign AI-assisted journaling and thought organization system built for explorers, creators, leaders, and lifelong learners.
+                Captain&apos;s Log exists to make privacy convenient again.
               </p>
               <p className="text-lg text-stone-300 leading-relaxed mb-5">
-                Capture your thoughts. Refine your logic. Preserve your memories. Clarify your decisions. Build your legacy.
+                The project explores privacy-preserving artificial intelligence, secure journaling, personal knowledge management, encrypted communications, and technologies that allow individuals to benefit from powerful digital tools without surrendering ownership of their thoughts, memories, personal information, or creative work.
+              </p>
+              <p className="text-lg text-stone-300 leading-relaxed mb-5">
+                Its purpose is to help people maintain sovereignty over their data while still enjoying the convenience and capabilities of modern technology.
               </p>
               <p className="text-lg text-stone-300 leading-relaxed mb-6">
-                Everything remains under your control.
+                Capture your thoughts. Refine your logic. Preserve your memories. Clarify your decisions. Build your legacy — entirely on your own terms.
               </p>
               <p className="text-base font-semibold text-white">
                 Your thoughts. Your keys. Your mind. Your data. Your story.
@@ -103,13 +118,13 @@ export default function Projects() {
                   id: 'feedabrain',
                   tag: 'Health',
                   name: 'Feed a Brain',
-                  desc: 'Brain health education and resources for optimizing human potential through nutrition, lifestyle, and functional medicine.',
+                  desc: 'Feed a Brain exists to empower individuals and families through education, practical tools, and accessible knowledge related to brain health, recovery, healing, and human performance. Medical empowerment, health literacy, and self-directed healing at the center.',
                 },
                 {
                   id: 'abi',
                   tag: 'Health',
                   name: 'Adventures in Brain Injury',
-                  desc: 'Stories, resources, and community support for those navigating life after brain injury — with honesty, hope, and practical guidance.',
+                  desc: 'Stories, education, and inspiration drawn from real recovery journeys. A testament to human resilience — offered with honesty, hope, and practical guidance for those navigating life after brain injury.',
                 },
                 {
                   id: 'neuromixology',
