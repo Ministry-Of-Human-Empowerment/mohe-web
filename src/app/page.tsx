@@ -7,17 +7,17 @@ const projects = [
   {
     name: 'FlowBond',
     tag: 'Ecosystem',
-    description: 'A relational ecosystem for community, connection, and covenant. Parent platform for FlowCastle, FlowGarden, and FlowNation.',
+    description: 'A relational ecosystem for building trusted communities and aligned relationships — grounded in belonging, mutual support, human connection, and shared purpose. Parent platform for FlowCastle, FlowGarden, and FlowNation.',
   },
   {
     name: 'FlowCastle',
     tag: 'Networked Community',
-    description: 'A connected space for people to gather, belong, and build relationships within the FlowBond ecosystem.',
+    description: 'A space for knowledge organization, information architecture, and structured learning — your digital home for personal and collective intelligence within the FlowBond network.',
   },
   {
     name: 'FlowGarden',
     tag: 'Networked Projects',
-    description: 'A shared space for collaborating on ideas, initiatives, and meaningful work within the FlowBond ecosystem.',
+    description: 'A garden for growth, creativity, and cultivation — a space for nurturing ideas, projects, and people, tended with care and intention.',
   },
   {
     name: 'FlowNation',
@@ -27,17 +27,17 @@ const projects = [
   {
     name: 'CaptainsLog',
     tag: 'Sovereignty',
-    description: 'Sovereign AI-assisted journaling and thought organization. Your thoughts, your keys, your legacy.',
+    description: 'Privacy-preserving AI-assisted journaling and personal knowledge management. Your thoughts, memories, and creative work remain entirely yours — sovereign, secure, and under your control.',
   },
   {
     name: 'Feed a Brain',
     tag: 'Health',
-    description: 'Brain health education and resources for optimizing human potential through nutrition and lifestyle.',
+    description: 'Empowering individuals and families through education, practical tools, and accessible knowledge related to brain health, recovery, healing, and human performance.',
   },
   {
     name: 'Adventures in Brain Injury',
     tag: 'Health',
-    description: 'Stories, resources, and community support for those navigating life after brain injury.',
+    description: 'Stories, education, and inspiration drawn from recovery journeys — honoring human resilience and the enduring possibility of healing.',
   },
   {
     name: 'Neuromixology',
@@ -80,7 +80,7 @@ export default function Home() {
             Because All People Are Very Important
           </p>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed">
-            An unincorporated Private Ministerial Association dedicated to the upliftment, enlightenment, healing, education, privacy, and empowerment of every human being on Earth.
+            Creating environments where life can flourish. We seek to cultivate environments in which life may thrive physically, mentally, emotionally, spiritually, socially, and creatively, and to do so in ways that reduce unnecessary friction, coercion, fear, manipulation, and artificial barriers to human flourishing.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -103,7 +103,10 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-5">Our Mission</p>
             <p className="text-2xl sm:text-3xl text-stone-200 leading-relaxed font-light">
-              The Ministry exists to further the upliftment, enlightenment, spiritual realization, and general welfare of people throughout the world.
+              The Ministry of Human Empowerment exists to create environments where life can flourish through health, privacy, sovereignty, education, spiritual realization, conscious technology, and voluntary community.
+            </p>
+            <p className="mt-6 text-xl text-stone-400 leading-relaxed font-light">
+              We support individuals in discovering their unique gifts, protecting their dignity and personal sovereignty, expanding their awareness, and contributing meaningfully to the world around them.
             </p>
           </div>
         </section>
@@ -194,7 +197,7 @@ export default function Home() {
         <section className="px-6 py-24 bg-stone-900 text-center">
           <div className="max-w-2xl mx-auto">
             <p className="text-xl sm:text-2xl text-stone-300 leading-relaxed font-light">
-              The Ministry of Human Empowerment is an ecosystem for people committed to living with greater agency, wisdom, conscience, and purpose.
+              The Ministry of Human Empowerment exists to help create the conditions under which life can thrive — a community devoted to human flourishing, dignity, freedom, and the betterment of life on Earth.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link

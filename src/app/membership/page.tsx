@@ -36,6 +36,12 @@ export default function Membership() {
               We are united by a shared commitment to human flourishing, personal sovereignty, lifelong learning, healing, service, and the betterment of life on Earth.
             </p>
             <p className="font-medium text-white">
+              Membership is not merely an administrative status. It is a voluntary affirmation of the Ministry&apos;s mission, principles, and statement of faith.
+            </p>
+            <p>
+              Members join a community dedicated to human flourishing, personal sovereignty, privacy, education, service, and the betterment of life on Earth.
+            </p>
+            <p className="font-medium text-white">
               Membership is not about obligation. It is about alignment.
             </p>
             <p>
@@ -52,6 +58,9 @@ export default function Membership() {
             </p>
             <p>
               Our projects include initiatives focused on personal development, health and wellness, knowledge sharing, privacy, human-centered technology, community building, and the exploration of human potential.
+            </p>
+            <p>
+              Public educational resources may be available to all. Certain programs, communities, services, coaching opportunities, and private-domain activities may be available exclusively to members.
             </p>
             <p>Above all, we recognize a simple truth:</p>
 

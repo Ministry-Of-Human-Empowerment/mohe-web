@@ -9,7 +9,7 @@ export const metadata = {
 const principles = [
   {
     title: 'Faith',
-    body: 'Faith is not about dogma. Faith is an expectation for goodness in humanity as opposed to fear of the evil in the world. We believe in a living spiritual reality that transcends and underlies all things. The Ministry is rooted in sincere faith and genuine conscience.',
+    body: 'Faith is not about dogma. Faith is a living orientation toward truth, goodness, courage, growth, and the possibility of healing, even in a world where fear, suffering, and conflict exist. We believe in a living spiritual reality that transcends and underlies all things. The Ministry is rooted in sincere faith and genuine conscience.',
   },
   {
     title: 'Privacy',
@@ -41,7 +41,7 @@ const affirmations = [
   'Life, awareness, and creation are sacred',
   'The expansion of consciousness is a natural and desirable path',
   'Beauty emerges from alignment with the flow of life',
-  'Truth is revealed through direct experience, reflection, and communion with nature',
+  'Truth may be explored through sacred writings, spiritual traditions, personal experience, reflection, conscience, prayer, meditation, and communion with nature',
   'Every individual possesses an inherent right to sovereignty over their own mind, body, consciousness, and personal information',
 ]
 
@@ -100,7 +100,7 @@ export default function Ethos() {
               </div>
 
               <p>
-                We recognize that life flourishes when nurtured within environments aligned with truth, freedom, privacy, creativity, nourishment, connection, mutual respect, ease, and flow. Just as the quality of soil shapes the health, vitality, and fruitfulness of a plant, the conditions surrounding human beings shape the expression of consciousness, health, creativity, and human potential.
+                We recognize that life flourishes most fully within environments grounded in dignity, voluntary association, informed consent, mutual respect, creativity, ease, and harmony with the natural flow of life. Just as the quality of soil shapes the health, vitality, and fruitfulness of a plant, the conditions surrounding human beings shape the expression of consciousness, health, creativity, and human potential.
               </p>
               <p>
                 We therefore seek to cultivate environments in which life may thrive physically, mentally, emotionally, spiritually, socially, and creatively, and to do so in ways that reduce unnecessary friction, coercion, fear, manipulation, and artificial barriers to human flourishing. We recognize ease not as passivity, but as alignment with the natural flow through which life most fully expresses its vitality, intelligence, beauty, and creative potential.
@@ -136,12 +136,34 @@ export default function Ethos() {
               <p>
                 We honor the freedom of each member to explore, interpret, and embody truth in their own way, in alignment with conscience, nature, and the greater good of life.
               </p>
+              <p>
+                The Ministry honors Christianity and the Holy Bible as a living source of truth, wisdom, and spiritual nourishment. We equally welcome sincere seekers from all spiritual traditions — recognizing that genuine faith and the pursuit of truth can arise through many paths, and that the Spirit of life moves through those who seek it with honesty and integrity.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Privacy as Sacred */}
+        <section className="px-6 py-20 bg-stone-900">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-3">Privacy as Sacred</p>
+            <h2 className="text-2xl font-semibold text-white mb-8">Privacy as Sacred</h2>
+            <div className="text-stone-300 leading-relaxed text-lg space-y-5 border-l-2 border-amber-500 pl-8">
+              <p>
+                We recognize privacy as a natural and essential condition for human flourishing.
+              </p>
+              <p>
+                A person&rsquo;s thoughts, experiences, communications, consciousness, and personal information are extensions of the individual and remain their rightful responsibility and stewardship.
+              </p>
+              <p>
+                In a world where personal information has become increasingly commodified, we support the development of technologies, communities, and practices that allow privacy and convenience to coexist.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Core Principles */}
-        <section className="px-6 py-20 bg-stone-900">
+        <section className="px-6 py-20 bg-stone-950">
           <div className="max-w-3xl mx-auto">
             <p className="text-xs font-semibold tracking-widest uppercase text-amber-400 mb-3 text-center">Core Principles</p>
             <h2 className="text-2xl font-semibold text-white mb-10 text-center">What We Stand For</h2>
